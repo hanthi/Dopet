@@ -1,0 +1,249 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+  }
+  
+  /* Body and background */
+  body {
+    line-height: 1.6;
+    background-color: #f4f4f9;
+    color: #333;
+  }
+  
+/* Hero Section */
+.hero {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    position: relative;
+    flex-direction: row; /* Default to row layout (side-by-side images) */
+  }
+  
+  /* Image Containers */
+  .image-container {
+    flex: 1;
+    height: 100%;
+    overflow: hidden;
+    border: 10px solid #82085e; /* Border around the images */
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  /* Content Box */
+  .hero-content {
+    position: absolute;
+    top: 20px; /* Position the content box at the top of the section */
+    color: white;
+    text-align: center;
+    z-index: 2;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 20px;
+    width: 80%; /* Ensures the content box doesn't go off-screen */
+    max-width: 800px;
+  }
+
+  /* Hero Content Box */
+.hero-content {
+    position: absolute;
+    top: 20px; /* Keeps the box near the top */
+    left: 50%;
+    transform: translateX(-50%); /* Centers the box horizontally */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 20px;
+    width: 80%; /* Takes up 80% of the width */
+    max-width: 800px; /* Prevents it from becoming too wide */
+    text-align: center;
+  
+    /* Animation properties */
+    animation: fadeInFromTop 1s ease-out forwards; /* Applies the fade-in animation */
+  }
+  
+  /* Keyframe for fade-in and move effect */
+  @keyframes fadeInFromTop {
+    0% {
+      opacity: 0; /* Starts invisible */
+      transform: translateX(-50%) translateY(-50px); /* Starts from above */
+    }
+    100% {
+      opacity: 1; /* Fully visible */
+      transform: translateX(-50%) translateY(0); /* Ends at its original position */
+    }
+  }
+  
+  
+  /* Heading and Text */
+  .hero h1 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+  }
+  
+  .hero p {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  
+  /* Button */
+  .cta-button {
+    padding: 10px 20px;
+    background-color: #82085e;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s;
+  }
+  
+  .cta-button:hover {
+    background-color: #2b2b2b;
+  }
+  
+  /* Mobile-Friendly Adjustment */
+  @media (max-width: 768px) {
+    .hero {
+      height: auto; /* Allow the hero section height to adjust */
+      flex-direction: column; /* Stack images and content vertically */
+      align-items: center; /* Center everything */
+    }
+  
+    .image-container {
+      width: 100%; /* Ensure images fill the screen width */
+      height: auto; /* Adjust image height based on aspect ratio */
+    }
+  
+    .hero-content {
+      position: absolute;
+      top: 20px; /* Keep the content box at the top */
+      width: 90%; /* Make sure content box fits within the screen */
+      margin-top: 0; /* Remove extra space on top */
+    }
+  
+    .hero h1 {
+      font-size: 2rem; /* Adjust text size */
+    }
+  
+    .hero p {
+      font-size: 1.2rem; /* Adjust text size */
+    }
+  
+    .cta-button {
+      font-size: 1.2rem; /* Adjust button size */
+      padding: 12px 25px; /* Adjust button padding */
+    }
+  }
+  
+  
+  /* FAQ Section */
+  .faq-section {
+    padding: 40px 20px;
+    background-color: #ffffff;
+    text-align: center;
+  }
+  
+  .faq-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  .faq-item {
+    margin-bottom: 20px;
+    background-color: rgba(147, 147, 147, 0.3);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+  
+  .faq-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .faq-item p {
+    font-size: 1rem;
+  }
+  
+  /* Map Button */
+  .map-button {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #000000;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+  }
+  
+  .map-button:hover {
+    background-color: #606060;
+  }
+  
+  .rsvp-section {
+    padding: 40px 20px;
+    background-color: #82085e;
+    text-align: center;
+    color: white;
+  }
+  
+  .rsvp-section h2 {
+    margin-bottom: 15px;;
+  }
+
+  .rsvp-section p {
+    font-size: 1.2rem; /* Adjust font size */
+    margin-bottom: 30px; /* Increased space between the text and the button */
+    color: #ffffff; /* Adjust color if needed */
+  }
+  
+  .rsvp-button {
+    padding: 15px 30px;
+    background-color: #000000;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s;
+  }
+  
+  .rsvp-button:hover {
+    background-color: #606060;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+  
+    .hero p {
+      font-size: 1.2rem;
+    }
+  
+    .faq-section {
+      padding: 20px;
+    }
+  
+    .faq-item h3 {
+      font-size: 1.3rem;
+    }
+  
+    .rsvp-button {
+      font-size: 1rem;
+    }
+  }
+  
